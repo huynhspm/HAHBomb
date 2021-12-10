@@ -17,7 +17,7 @@ public class Item extends Sprite {
 
     private final Enum.TYPE_ITEM type;
 
-    public static void createItem(int xInMap, int yInMap){
+    public static void createItem(int xInMap, int yInMap) {
         int random = Math.abs(new Random().nextInt()) % 20;
         int index = (random < 1) ? 1 : (random < 5) ? 0 : (random < 9) ? 2 : (random < 13) ? 3 : 4;
         if (index < 4) {

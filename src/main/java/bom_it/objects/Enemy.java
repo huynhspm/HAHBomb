@@ -9,20 +9,20 @@ import bom_it.game.Enum;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static bom_it.game.Enum.DIRECTION.DOWN;
 import static bom_it.game.Enum.STATUS_CHARACTER.IMMORTAL;
 import static bom_it.game.Enum.TYPE_SPRITE.ENEMY;
 
 public class Enemy extends Character {
     private EnemyController controller;
 
-    public static void createEnemy(int xInMap, int yInMap){
+    public static void createEnemy(int xInMap, int yInMap) {
         App.gameWorld.spawn(new Enemy(xInMap, yInMap));
     }
 
     public Enemy(int xInMap, int yInMap) {
-        super(Images.enemy_down[App.gameWorld.getLevel() - 1][0].getImage(), xInMap, yInMap, ENEMY,
-                Images.enemy_up[App.gameWorld.getLevel() - 1], Images.enemy_down[App.gameWorld.getLevel() - 1],
-                Images.enemy_right[App.gameWorld.getLevel() - 1], Images.enemy_left[App.gameWorld.getLevel() - 1]);
+        super(Images.enemy[App.gameWorld.getLevel() - 1][DOWN.ordinal()][0].getImage(),
+                xInMap, yInMap, ENEMY, Images.enemy[App.gameWorld.getLevel() - 1]);
         switch (App.gameWorld.getLevel()) {
             case 1 -> controller = new EnemyLevel1Controller(this);
             case 2 -> controller = new EnemyLevel2Controller(this);

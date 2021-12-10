@@ -10,16 +10,14 @@ import javafx.scene.image.Image;
 
 import java.util.Date;
 
+import static bom_it.game.Enum.DIRECTION.*;
 import static bom_it.game.Enum.STATUS_CHARACTER.*;
 import static bom_it.game.Enum.TYPE_SPRITE.*;
 
 public abstract class Character extends Sprite {
     public static final double IMMORTAL_TIME = 3;
     public static final double STUNNED_TIME = 2;
-    private final Images[] imageUp;
-    private final Images[] imageDown;
-    private final Images[] imageRight;
-    private final Images[] imageLeft;
+    private final Images[][] imageCharacter;
 
     private final double VELOCITY = 0.25;
 
@@ -88,7 +86,7 @@ public abstract class Character extends Sprite {
     }
 
     public Image getImageInfo() {
-        return imageDown[0].getImage();
+        return imageCharacter[DOWN.ordinal()][0].getImage();
     }
 
     public void setStunnedTime(double stunnedTime) {
@@ -104,14 +102,10 @@ public abstract class Character extends Sprite {
     }
 
     // Constructor
-    public Character(Image image, int xInMap, int yInMap, Enum.TYPE_SPRITE typeSprite,
-                     Images[] imageUp, Images[] imageDown, Images[] imageRight, Images[] imageLeft) {
+    public Character(Image image, int xInMap, int yInMap, Enum.TYPE_SPRITE typeSprite, Images[][] imageCharacter) {
         super(image, xInMap, yInMap, typeSprite);
         onBomb = new Bomb[]{null, null};
-        this.imageUp = imageUp;
-        this.imageDown = imageDown;
-        this.imageRight = imageRight;
-        this.imageLeft = imageLeft;
+        this.imageCharacter = imageCharacter;
     }
 
     // Move
@@ -168,22 +162,22 @@ public abstract class Character extends Sprite {
 
 
         if (moveUp) {
-            setImage(imageUp[index % 3 + 2].getImage());
+            setImage(imageCharacter[UP.ordinal()][index % 3 + 2].getImage());
             move(0, -VELOCITY * powerSpeed.getValue());
         }
 
         if (moveLeft) {
-            setImage(imageLeft[index % 3 + 2].getImage());
+            setImage(imageCharacter[LEFT.ordinal()][index % 3 + 2].getImage());
             move(-VELOCITY * powerSpeed.getValue(), 0);
         }
 
         if (moveDown) {
-            setImage(imageDown[index % 3 + 2].getImage());
+            setImage(imageCharacter[DOWN.ordinal()][index % 3 + 2].getImage());
             move(0, VELOCITY * powerSpeed.getValue());
         }
 
         if (moveRight) {
-            setImage(imageRight[index % 3 + 2].getImage());
+            setImage(imageCharacter[RIGHT.ordinal()][index % 3 + 2].getImage());
             move(VELOCITY * powerSpeed.getValue(), 0);
         }
 

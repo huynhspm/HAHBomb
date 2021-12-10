@@ -5,294 +5,298 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
 public class Images {
-    public static Images[][] boomer_left = {
+    public static Images[][][] boomer = {
             {
-                    new Images(0, 0, ImageSheet.imageGame),
-                    new Images(1, 0, ImageSheet.imageGame),
-                    new Images(2, 0, ImageSheet.imageGame)
+                    {
+                            new Images(0, 0, ImageSheet.imageGame),
+                            new Images(1, 0, ImageSheet.imageGame),
+                            new Images(2, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 1, ImageSheet.imageGame),
+                            new Images(1, 1, ImageSheet.imageGame),
+                            new Images(2, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 2, ImageSheet.imageGame),
+                            new Images(1, 2, ImageSheet.imageGame),
+                            new Images(2, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 3, ImageSheet.imageGame),
+                            new Images(1, 3, ImageSheet.imageGame),
+                            new Images(2, 3, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(3, 0, ImageSheet.imageGame),
-                    new Images(4, 0, ImageSheet.imageGame),
-                    new Images(5, 0, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 0, ImageSheet.imageGame),
-                    new Images(7, 0, ImageSheet.imageGame),
-                    new Images(8, 0, ImageSheet.imageGame)
-            }
-            ,
-            {
-                    new Images(9, 0, ImageSheet.imageGame),
-                    new Images(10, 0, ImageSheet.imageGame),
-                    new Images(11, 0, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 0, ImageSheet.imageGame),
-                    new Images(13, 0, ImageSheet.imageGame),
-                    new Images(14, 0, ImageSheet.imageGame)
-            },
-            {
-                    new Images(15, 0, ImageSheet.imageGame),
-                    new Images(16, 0, ImageSheet.imageGame),
-                    new Images(17, 0, ImageSheet.imageGame)
-            },
-            {
-                    new Images(18, 0, ImageSheet.imageGame),
-                    new Images(19, 0, ImageSheet.imageGame),
-                    new Images(20, 0, ImageSheet.imageGame)
-            },
-            {
-                    new Images(21, 0, ImageSheet.imageGame),
-                    new Images(22, 0, ImageSheet.imageGame),
-                    new Images(23, 0, ImageSheet.imageGame)
-            }
 
-    };
+                    {
+                            new Images(3, 0, ImageSheet.imageGame),
+                            new Images(4, 0, ImageSheet.imageGame),
+                            new Images(5, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 1, ImageSheet.imageGame),
+                            new Images(4, 1, ImageSheet.imageGame),
+                            new Images(5, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 2, ImageSheet.imageGame),
+                            new Images(4, 2, ImageSheet.imageGame),
+                            new Images(5, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 3, ImageSheet.imageGame),
+                            new Images(4, 3, ImageSheet.imageGame),
+                            new Images(5, 3, ImageSheet.imageGame)
+                    }
+            },
+            {
+                    {
+                            new Images(6, 0, ImageSheet.imageGame),
+                            new Images(7, 0, ImageSheet.imageGame),
+                            new Images(8, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 1, ImageSheet.imageGame),
+                            new Images(7, 1, ImageSheet.imageGame),
+                            new Images(8, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 2, ImageSheet.imageGame),
+                            new Images(7, 2, ImageSheet.imageGame),
+                            new Images(8, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 3, ImageSheet.imageGame),
+                            new Images(7, 3, ImageSheet.imageGame),
+                            new Images(8, 3, ImageSheet.imageGame)
+                    }
+            },
+            {
+                    {
+                            new Images(9, 0, ImageSheet.imageGame),
+                            new Images(10, 0, ImageSheet.imageGame),
+                            new Images(11, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 1, ImageSheet.imageGame),
+                            new Images(10, 1, ImageSheet.imageGame),
+                            new Images(11, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 2, ImageSheet.imageGame),
+                            new Images(10, 2, ImageSheet.imageGame),
+                            new Images(11, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 3, ImageSheet.imageGame),
+                            new Images(10, 3, ImageSheet.imageGame),
+                            new Images(11, 3, ImageSheet.imageGame)
+                    }
+            },
+            {
+                    {
+                            new Images(12, 0, ImageSheet.imageGame),
+                            new Images(13, 0, ImageSheet.imageGame),
+                            new Images(14, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 1, ImageSheet.imageGame),
+                            new Images(13, 1, ImageSheet.imageGame),
+                            new Images(14, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 2, ImageSheet.imageGame),
+                            new Images(13, 2, ImageSheet.imageGame),
+                            new Images(14, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 3, ImageSheet.imageGame),
+                            new Images(13, 3, ImageSheet.imageGame),
+                            new Images(14, 3, ImageSheet.imageGame)
+                    }
+            },
+            {
+                    {
+                            new Images(15, 0, ImageSheet.imageGame),
+                            new Images(16, 0, ImageSheet.imageGame),
+                            new Images(17, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(15, 1, ImageSheet.imageGame),
+                            new Images(16, 1, ImageSheet.imageGame),
+                            new Images(17, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(15, 2, ImageSheet.imageGame),
+                            new Images(16, 2, ImageSheet.imageGame),
+                            new Images(17, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(15, 3, ImageSheet.imageGame),
+                            new Images(16, 3, ImageSheet.imageGame),
+                            new Images(17, 3, ImageSheet.imageGame)
+                    }
 
-    public static Images[][] boomer_right = {
-            {
-                    new Images(0, 1, ImageSheet.imageGame),
-                    new Images(1, 1, ImageSheet.imageGame),
-                    new Images(2, 1, ImageSheet.imageGame)
             },
             {
-                    new Images(3, 1, ImageSheet.imageGame),
-                    new Images(4, 1, ImageSheet.imageGame),
-                    new Images(5, 1, ImageSheet.imageGame)
+                    {
+                            new Images(18, 0, ImageSheet.imageGame),
+                            new Images(19, 0, ImageSheet.imageGame),
+                            new Images(20, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(18, 1, ImageSheet.imageGame),
+                            new Images(19, 1, ImageSheet.imageGame),
+                            new Images(20, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(18, 2, ImageSheet.imageGame),
+                            new Images(19, 2, ImageSheet.imageGame),
+                            new Images(20, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(18, 3, ImageSheet.imageGame),
+                            new Images(19, 3, ImageSheet.imageGame),
+                            new Images(20, 3, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(6, 1, ImageSheet.imageGame),
-                    new Images(7, 1, ImageSheet.imageGame),
-                    new Images(8, 1, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 1, ImageSheet.imageGame),
-                    new Images(10, 1, ImageSheet.imageGame),
-                    new Images(11, 1, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 1, ImageSheet.imageGame),
-                    new Images(13, 1, ImageSheet.imageGame),
-                    new Images(14, 1, ImageSheet.imageGame)
-            },
-            {
-                    new Images(15, 1, ImageSheet.imageGame),
-                    new Images(16, 1, ImageSheet.imageGame),
-                    new Images(17, 1, ImageSheet.imageGame)
-            },
-            {
-                    new Images(18, 1, ImageSheet.imageGame),
-                    new Images(19, 1, ImageSheet.imageGame),
-                    new Images(20, 1, ImageSheet.imageGame)
-            },
-            {
-                    new Images(21, 1, ImageSheet.imageGame),
-                    new Images(22, 1, ImageSheet.imageGame),
-                    new Images(23, 1, ImageSheet.imageGame)
-            }
-
-    };
-
-    public static Images[][] boomer_down = {
-            {
-                    new Images(0, 2, ImageSheet.imageGame),
-                    new Images(1, 2, ImageSheet.imageGame),
-                    new Images(2, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(3, 2, ImageSheet.imageGame),
-                    new Images(4, 2, ImageSheet.imageGame),
-                    new Images(5, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 2, ImageSheet.imageGame),
-                    new Images(7, 2, ImageSheet.imageGame),
-                    new Images(8, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 2, ImageSheet.imageGame),
-                    new Images(10, 2, ImageSheet.imageGame),
-                    new Images(11, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 2, ImageSheet.imageGame),
-                    new Images(13, 2, ImageSheet.imageGame),
-                    new Images(14, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(15, 2, ImageSheet.imageGame),
-                    new Images(16, 2, ImageSheet.imageGame),
-                    new Images(17, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(18, 2, ImageSheet.imageGame),
-                    new Images(19, 2, ImageSheet.imageGame),
-                    new Images(20, 2, ImageSheet.imageGame)
-            },
-            {
-                    new Images(21, 2, ImageSheet.imageGame),
-                    new Images(22, 2, ImageSheet.imageGame),
-                    new Images(23, 2, ImageSheet.imageGame)
-            }
-    };
-
-
-    public static Images[][] boomer_up = {
-            {
-                    new Images(0, 3, ImageSheet.imageGame),
-                    new Images(1, 3, ImageSheet.imageGame),
-                    new Images(2, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(3, 3, ImageSheet.imageGame),
-                    new Images(4, 3, ImageSheet.imageGame),
-                    new Images(5, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 3, ImageSheet.imageGame),
-                    new Images(7, 3, ImageSheet.imageGame),
-                    new Images(8, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 3, ImageSheet.imageGame),
-                    new Images(10, 3, ImageSheet.imageGame),
-                    new Images(11, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 3, ImageSheet.imageGame),
-                    new Images(13, 3, ImageSheet.imageGame),
-                    new Images(14, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(15, 3, ImageSheet.imageGame),
-                    new Images(16, 3, ImageSheet.imageGame),
-                    new Images(17, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(18, 3, ImageSheet.imageGame),
-                    new Images(19, 3, ImageSheet.imageGame),
-                    new Images(20, 3, ImageSheet.imageGame)
-            },
-            {
-                    new Images(21, 3, ImageSheet.imageGame),
-                    new Images(22, 3, ImageSheet.imageGame),
-                    new Images(23, 3, ImageSheet.imageGame)
-            }
-
-    };
-
-    public static Images[][] enemy_left = {
-            {
-                    new Images(0, 5, ImageSheet.imageGame),
-                    new Images(1, 5, ImageSheet.imageGame),
-                    new Images(2, 5, ImageSheet.imageGame)
-            },
-            {
-                    new Images(3, 5, ImageSheet.imageGame),
-                    new Images(4, 5, ImageSheet.imageGame),
-                    new Images(5, 5, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 5, ImageSheet.imageGame),
-                    new Images(7, 5, ImageSheet.imageGame),
-                    new Images(8, 5, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 5, ImageSheet.imageGame),
-                    new Images(10, 5, ImageSheet.imageGame),
-                    new Images(11, 5, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 5, ImageSheet.imageGame),
-                    new Images(13, 5, ImageSheet.imageGame),
-                    new Images(14, 5, ImageSheet.imageGame)
+                    {
+                            new Images(21, 0, ImageSheet.imageGame),
+                            new Images(22, 0, ImageSheet.imageGame),
+                            new Images(23, 0, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(21, 1, ImageSheet.imageGame),
+                            new Images(22, 1, ImageSheet.imageGame),
+                            new Images(23, 1, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(21, 2, ImageSheet.imageGame),
+                            new Images(22, 2, ImageSheet.imageGame),
+                            new Images(23, 2, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(21, 3, ImageSheet.imageGame),
+                            new Images(22, 3, ImageSheet.imageGame),
+                            new Images(23, 3, ImageSheet.imageGame)
+                    }
             }
 
     };
 
-    public static Images[][] enemy_right = {
+    public static Images[][][] enemy = {
             {
-                    new Images(0, 6, ImageSheet.imageGame),
-                    new Images(1, 6, ImageSheet.imageGame),
-                    new Images(2, 6, ImageSheet.imageGame)
+                    {
+                            new Images(0, 5, ImageSheet.imageGame),
+                            new Images(1, 5, ImageSheet.imageGame),
+                            new Images(2, 5, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 6, ImageSheet.imageGame),
+                            new Images(1, 6, ImageSheet.imageGame),
+                            new Images(2, 6, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 7, ImageSheet.imageGame),
+                            new Images(1, 7, ImageSheet.imageGame),
+                            new Images(2, 7, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(0, 8, ImageSheet.imageGame),
+                            new Images(1, 8, ImageSheet.imageGame),
+                            new Images(2, 8, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(3, 6, ImageSheet.imageGame),
-                    new Images(4, 6, ImageSheet.imageGame),
-                    new Images(5, 6, ImageSheet.imageGame)
+                    {
+                            new Images(3, 5, ImageSheet.imageGame),
+                            new Images(4, 5, ImageSheet.imageGame),
+                            new Images(5, 5, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 6, ImageSheet.imageGame),
+                            new Images(4, 6, ImageSheet.imageGame),
+                            new Images(5, 6, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 7, ImageSheet.imageGame),
+                            new Images(4, 7, ImageSheet.imageGame),
+                            new Images(5, 7, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(3, 8, ImageSheet.imageGame),
+                            new Images(4, 8, ImageSheet.imageGame),
+                            new Images(5, 8, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(6, 6, ImageSheet.imageGame),
-                    new Images(7, 6, ImageSheet.imageGame),
-                    new Images(8, 6, ImageSheet.imageGame)
+                    {
+                            new Images(6, 5, ImageSheet.imageGame),
+                            new Images(7, 5, ImageSheet.imageGame),
+                            new Images(8, 5, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 6, ImageSheet.imageGame),
+                            new Images(7, 6, ImageSheet.imageGame),
+                            new Images(8, 6, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 7, ImageSheet.imageGame),
+                            new Images(7, 7, ImageSheet.imageGame),
+                            new Images(8, 7, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(6, 8, ImageSheet.imageGame),
+                            new Images(7, 8, ImageSheet.imageGame),
+                            new Images(8, 8, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(9, 6, ImageSheet.imageGame),
-                    new Images(10, 6, ImageSheet.imageGame),
-                    new Images(11, 6, ImageSheet.imageGame)
+                    {
+                            new Images(9, 5, ImageSheet.imageGame),
+                            new Images(10, 5, ImageSheet.imageGame),
+                            new Images(11, 5, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 6, ImageSheet.imageGame),
+                            new Images(10, 6, ImageSheet.imageGame),
+                            new Images(11, 6, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 7, ImageSheet.imageGame),
+                            new Images(10, 7, ImageSheet.imageGame),
+                            new Images(11, 7, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(9, 8, ImageSheet.imageGame),
+                            new Images(10, 8, ImageSheet.imageGame),
+                            new Images(11, 8, ImageSheet.imageGame)
+                    }
             },
             {
-                    new Images(12, 6, ImageSheet.imageGame),
-                    new Images(13, 6, ImageSheet.imageGame),
-                    new Images(14, 6, ImageSheet.imageGame)
-            }
-    };
-
-    public static Images[][] enemy_down = {
-            {
-                    new Images(0, 7, ImageSheet.imageGame),
-                    new Images(1, 7, ImageSheet.imageGame),
-                    new Images(2, 7, ImageSheet.imageGame)
-            },
-            {
-                    new Images(3, 7, ImageSheet.imageGame),
-                    new Images(4, 7, ImageSheet.imageGame),
-                    new Images(5, 7, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 7, ImageSheet.imageGame),
-                    new Images(7, 7, ImageSheet.imageGame),
-                    new Images(8, 7, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 7, ImageSheet.imageGame),
-                    new Images(10, 7, ImageSheet.imageGame),
-                    new Images(11, 7, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 7, ImageSheet.imageGame),
-                    new Images(13, 7, ImageSheet.imageGame),
-                    new Images(14, 7, ImageSheet.imageGame)
-            }
-    };
-
-
-    public static Images[][] enemy_up = {
-            {
-                    new Images(0, 8, ImageSheet.imageGame),
-                    new Images(1, 8, ImageSheet.imageGame),
-                    new Images(2, 8, ImageSheet.imageGame)
-            },
-            {
-                    new Images(3, 8, ImageSheet.imageGame),
-                    new Images(4, 8, ImageSheet.imageGame),
-                    new Images(5, 8, ImageSheet.imageGame)
-            },
-            {
-                    new Images(6, 8, ImageSheet.imageGame),
-                    new Images(7, 8, ImageSheet.imageGame),
-                    new Images(8, 8, ImageSheet.imageGame)
-            },
-            {
-                    new Images(9, 8, ImageSheet.imageGame),
-                    new Images(10, 8, ImageSheet.imageGame),
-                    new Images(11, 8, ImageSheet.imageGame)
-            },
-            {
-                    new Images(12, 8, ImageSheet.imageGame),
-                    new Images(13, 8, ImageSheet.imageGame),
-                    new Images(14, 8, ImageSheet.imageGame)
+                    {
+                            new Images(12, 5, ImageSheet.imageGame),
+                            new Images(13, 5, ImageSheet.imageGame),
+                            new Images(14, 5, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 6, ImageSheet.imageGame),
+                            new Images(13, 6, ImageSheet.imageGame),
+                            new Images(14, 6, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 7, ImageSheet.imageGame),
+                            new Images(13, 7, ImageSheet.imageGame),
+                            new Images(14, 7, ImageSheet.imageGame)
+                    },
+                    {
+                            new Images(12, 8, ImageSheet.imageGame),
+                            new Images(13, 8, ImageSheet.imageGame),
+                            new Images(14, 8, ImageSheet.imageGame)
+                    }
             }
     };
 

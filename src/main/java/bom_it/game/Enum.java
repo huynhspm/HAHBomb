@@ -5,7 +5,7 @@ import bom_it.objects.Character;
 
 public class Enum {
     public enum DIRECTION {
-        UP, RIGHT, DOWN, LEFT;
+        LEFT, RIGHT, DOWN, UP;
 
         public static DIRECTION oppositeDirect(DIRECTION direct) {
             DIRECTION oppositeDirect = UP;

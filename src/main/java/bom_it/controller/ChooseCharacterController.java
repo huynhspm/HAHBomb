@@ -12,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static bom_it.game.Enum.DIRECTION.DOWN;
+
 public class ChooseCharacterController implements Initializable {
     private final Images[] buttonContinue = Images.buttonContinue;
     private final Images[] buttonBack = Images.buttonBack;
@@ -56,11 +58,11 @@ public class ChooseCharacterController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         imageContinue.setImage(buttonContinue[0].getImage());
         imageBack.setImage(buttonBack[0].getImage());
-        imagePlayer.setImage(Images.boomer_down[Player.type.ordinal()][0].getImage());
+        imagePlayer.setImage(Images.boomer[Player.type.ordinal()][DOWN.ordinal()][0].getImage());
 
         for (int i = 0; i < 2; ++i) {
             for (int j = 0; j < 4; ++j) {
-                ImageView imageView = new ImageView(Images.boomer_down[i * 4 + j][0].getImage());
+                ImageView imageView = new ImageView(Images.boomer[i * 4 + j][DOWN.ordinal()][0].getImage());
                 imageView.setTranslateX(250 + j * 100);
                 imageView.setTranslateY(120 + i * 120);
                 imageView.setFitHeight(90);
@@ -69,7 +71,7 @@ public class ChooseCharacterController implements Initializable {
                 Enum.TYPE_PLAYER type = Enum.TYPE_PLAYER.values()[i * 4 + j];
                 imageView.setOnMouseClicked(mouseEvent -> {
                     Player.type = type;
-                    imagePlayer.setImage(Images.boomer_down[Player.type.ordinal()][0].getImage());
+                    imagePlayer.setImage(Images.boomer[Player.type.ordinal()][DOWN.ordinal()][0].getImage());
                 });
 
                 anchorPane.getChildren().add(imageView);
