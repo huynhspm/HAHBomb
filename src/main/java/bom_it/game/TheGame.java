@@ -51,6 +51,7 @@ public class TheGame extends GameWorld {
 
     @Override
     protected void checkEndGame() {
+        timeLeft.setValue(timeLeft.getValue() - 1);
         if (status.getValue() == LOSS.ordinal() && timeLWP < 0) {
             shutdown();
             sleep();
