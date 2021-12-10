@@ -2,9 +2,11 @@ package bom_it.objects;
 
 import bom_it.engine.Images;
 import bom_it.engine.Sprite;
+import bom_it.game.App;
 import bom_it.game.Enum;
 
 import java.util.Date;
+import java.util.Random;
 
 import static bom_it.game.Enum.TYPE_SPRITE.ITEM;
 
@@ -14,6 +16,14 @@ public class Item extends Sprite {
     private static final Images[] IMAGE_ITEM = Images.items;
 
     private final Enum.TYPE_ITEM type;
+
+    public static void createItem(int xInMap, int yInMap){
+        int random = Math.abs(new Random().nextInt()) % 20;
+        int index = (random < 1) ? 1 : (random < 5) ? 0 : (random < 9) ? 2 : (random < 13) ? 3 : 4;
+        if (index < 4) {
+            App.gameWorld.spawn(new Item(xInMap, yInMap, index));
+        }
+    }
 
     // constructor
     public Item(int xInMap, int yInMap, int index) {

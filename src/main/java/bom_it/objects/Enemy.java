@@ -15,6 +15,10 @@ import static bom_it.game.Enum.TYPE_SPRITE.ENEMY;
 public class Enemy extends Character {
     private EnemyController controller;
 
+    public static void createEnemy(int xInMap, int yInMap){
+        App.gameWorld.spawn(new Enemy(xInMap, yInMap));
+    }
+
     public Enemy(int xInMap, int yInMap) {
         super(Images.enemy_down[App.gameWorld.getLevel() - 1][0].getImage(), xInMap, yInMap, ENEMY,
                 Images.enemy_up[App.gameWorld.getLevel() - 1], Images.enemy_down[App.gameWorld.getLevel() - 1],
@@ -81,7 +85,7 @@ public class Enemy extends Character {
         List<Sprite> enemies = App.gameWorld.sprites().stream().filter(sprite -> sprite instanceof Enemy).collect(Collectors.toList());
         if (enemies.isEmpty()) {
             Pair position = App.gameWorld.getSpritesMap().findEmptySquare();
-            App.gameWorld.spawn(new Portal(position.getX(), position.getY()));
+            Portal.createPortal(position.getX(), position.getY());
         }
     }
 }

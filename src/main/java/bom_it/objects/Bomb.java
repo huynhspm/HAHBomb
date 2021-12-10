@@ -16,11 +16,15 @@ public class Bomb extends Sprite {
     private double deathTime = DEATH_TIME;
     private final int power;
 
+    public static void createBomb(int xInMap, int yInMap, Character character){
+        App.gameWorld.spawn(new Bomb(xInMap, yInMap, character));
+    }
+
     // constructor
-    public Bomb(int xInMap, int yInMap, int power, Character character) {
+    public Bomb(int xInMap, int yInMap, Character character) {
         super(BOMB_IMAGE[0].getImage(), xInMap, yInMap, BOMB);
-        this.power = power;
         this.character = character;
+        this.power = character.powerBomb.getValue();
 
         for (Sprite sprite : App.gameWorld.sprites()) {
             if (sprite instanceof Character && sprite.checkCollision(this)) {
@@ -60,46 +64,6 @@ public class Bomb extends Sprite {
         }
         super.handleDeath();
         character.increaseNumBomb();
-        App.gameWorld.spawn(new Explode(xInMap, yInMap, 6));
-
-        boolean up = false;
-        boolean left = false;
-        boolean down = false;
-        boolean right = false;
-        Explode explode;
-
-        for (int i = 1; i <= power; ++i) {
-            if (!up) {
-                explode = new Explode(xInMap, yInMap - i, (i == power) ? 2 : 0);
-                up = spawnExplode(explode);
-            }
-
-            if (!down) {
-                explode = new Explode(xInMap, yInMap + i, (i == power) ? 4 : 0);
-                down = spawnExplode(explode);
-            }
-
-            if (!left) {
-                explode = new Explode(xInMap - i, yInMap, (i == power) ? 5 : 1);
-                left = spawnExplode(explode);
-            }
-
-            if (!right) {
-                explode = new Explode(xInMap + i, yInMap, (i == power) ? 3 : 1);
-                right = spawnExplode(explode);
-            }
-        }
-    }
-
-    // check explode can spread out
-    private boolean spawnExplode(Explode explode) {
-        if (explode.collisionBox()) {
-            App.gameWorld.spawn(explode);
-            return true;
-        } else if (!explode.collisionWall()) {
-            App.gameWorld.spawn(explode);
-            return false;
-        }
-        return true;
+        Explode.createExplode(xInMap, yInMap, power);
     }
 }

@@ -267,7 +267,7 @@ public abstract class Character extends Sprite {
             int x = getXSetBomb();
             int y = getYSetBomb();
             if (!App.gameWorld.getSpritesMap().getMap()[y][x].getTypeSprite(BOMB)) {
-                App.gameWorld.spawn(new Bomb(x, y, powerBomb.getValue(), this));
+                App.gameWorld.spawn(new Bomb(x, y, this));
             }
         }
     }

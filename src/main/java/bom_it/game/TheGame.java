@@ -9,7 +9,6 @@ import javafx.scene.input.KeyEvent;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 import static bom_it.game.App.setRoot;
@@ -105,29 +104,20 @@ public class TheGame extends GameWorld {
         spritesMap = new Map(WIDTH / SIZE_A_SQUARE, HEIGHT / SIZE_A_SQUARE, level);
         for (int h = 0; h < HEIGHT / SIZE_A_SQUARE; ++h) {
             for (int w = 0; w < WIDTH / SIZE_A_SQUARE; ++w) {
-                spawn(new Background(w, h));
+                Background.createBackground(w, h);
             }
         }
 
         for (int h = 0; h < HEIGHT / SIZE_A_SQUARE; ++h) {
             for (int w = 0; w < WIDTH / SIZE_A_SQUARE; ++w) {
                 if (spritesMap.getMap()[h][w].getTypeSprite(BOX)) {
-                    int index = (w + h) % 3;
-                    spawn(new Box(w, h, index));
+                    Box.createBox(w, h);
                 } else if (spritesMap.getMap()[h][w].getTypeSprite(WALL)) {
-                    int index;
-                    if ((h == 0 || w == 0 || h + 1 == HEIGHT / SIZE_A_SQUARE || w + 1 == WIDTH / SIZE_A_SQUARE)) {
-                        index = 0;
-                    } else {
-                        int random = Math.abs(new Random().nextInt()) % 10;
-                        index = (random < 3) ? 0 : 1;
-                    }
-                    spawn(new Wall(w, h, index));
+                    Wall.createWall(w, h);
                 } else if (spritesMap.getMap()[h][w].getTypeSprite(ENEMY)) {
-                    spawn(new Enemy(w, h));
+                    Enemy.createEnemy(w, h);
                 } else if (spritesMap.getMap()[h][w].getTypeSprite(PLAYER)) {
-                    player = new Player(w, h);
-                    spawn(player);
+                    player = Player.createPlayer(w, h);
                     setInput();
                 }
             }
