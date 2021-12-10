@@ -28,3 +28,6 @@
 - level 4: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 2, ăn item như người chơi
 - level 5: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 3, ăn item như người chơi
 ***
+## Update 1: Tạo riêng hàm create cho từng objects, tạo class enum riêng để chứa toàn bộ enum
+***
+## Update 2: Tạo cây thừa kế cho EnemyController để thuận tiện cho việc thêm enemy khi thêm level
