@@ -26,29 +26,4 @@ public class Player extends Character {
     public void update() {
         super.update();
     }
-
-    @Override
-    protected void collisionItem(Item item) {
-        switch (item.getType()) {
-            case BOMB_ITEM -> increaseNumBomb();
-            case FLAME_ITEM -> powerBomb.setValue(Math.min(powerBomb.getValue() + 1, Item.MAX_POWER_BOM));
-            case SPEED_ITEM -> powerSpeed.setValue(Math.min(powerSpeed.getValue() + 1, Item.MAX_POWER_SPEED));
-            case HEART_ITEM -> lives.setValue(lives.getValue() + 1);
-        }
-    }
-
-    @Override
-    protected void collisionExplode() {
-        handleDeath();
-    }
-
-    @Override
-    protected void collisionWall() {
-        backStep();
-    }
-
-    @Override
-    protected void collisionBox() {
-        backStep();
-    }
 }

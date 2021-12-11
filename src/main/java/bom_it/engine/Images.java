@@ -321,15 +321,24 @@ public class Images {
             new Images(11, 10, ImageSheet.imageGame)
     };
 
-    public static Images[] items = {
-            new Images(0, 11, ImageSheet.imageGame),
-            new Images(1, 11, ImageSheet.imageGame),
-            new Images(2, 11, ImageSheet.imageGame),
-            new Images(3, 11, ImageSheet.imageGame),
-            new Images(0, 12, ImageSheet.imageGame),
-            new Images(1, 12, ImageSheet.imageGame),
-            new Images(2, 12, ImageSheet.imageGame),
-            new Images(3, 12, ImageSheet.imageGame)
+    public static Images[][] items = {
+            {
+                    new Images(0, 11, ImageSheet.imageGame),
+                    new Images(0, 12, ImageSheet.imageGame),
+            },
+            {
+                    new Images(1, 11, ImageSheet.imageGame),
+                    new Images(1, 12, ImageSheet.imageGame),
+            },
+            {
+
+                    new Images(2, 11, ImageSheet.imageGame),
+                    new Images(2, 12, ImageSheet.imageGame),
+            },
+            {
+                    new Images(3, 11, ImageSheet.imageGame),
+                    new Images(3, 12, ImageSheet.imageGame)
+            }
     };
 
     public static Images[][] map = {

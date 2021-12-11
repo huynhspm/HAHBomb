@@ -4,7 +4,7 @@ import bom_it.controller.Pair;
 import bom_it.engine.Images;
 import bom_it.engine.Sprite;
 import bom_it.objects.Bomb;
-import bom_it.objects.Item;
+import bom_it.objects.FlameItem;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -311,7 +311,7 @@ public class Map {
     }
 
     private boolean checkDangerInDirection(int x, int y, Enum.DIRECTION direct) {
-        for (int i = 1; i <= Item.MAX_POWER_BOM; ++i) {
+        for (int i = 1; i <= FlameItem.MAX_POWER_BOM; ++i) {
             x += dx[direct.ordinal()];
             y += dy[direct.ordinal()];
 

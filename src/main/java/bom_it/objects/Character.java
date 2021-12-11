@@ -85,6 +85,22 @@ public abstract class Character extends Sprite {
         return powerSpeed;
     }
 
+    public int getLives() {
+        return lives.get();
+    }
+
+    public int getNumBomb() {
+        return numBomb.get();
+    }
+
+    public int getPowerBomb() {
+        return powerBomb.get();
+    }
+
+    public int getPowerSpeed() {
+        return powerSpeed.get();
+    }
+
     public Image getImageInfo() {
         return imageCharacter[DOWN.ordinal()][0].getImage();
     }
@@ -210,7 +226,6 @@ public abstract class Character extends Sprite {
                     }
                 } else if (sprite instanceof Item) {
                     collisionItem((Item) sprite);
-                    sprite.handleDeath();
                 }
             }
         }
@@ -229,13 +244,22 @@ public abstract class Character extends Sprite {
         }
     }
 
-    protected abstract void collisionItem(Item sprite);
+    protected void collisionItem(Item item){
+        item.powerUp(this);
+        item.handleDeath();
+    }
 
-    protected abstract void collisionExplode();
+    protected void collisionExplode(){
+        handleDeath();
+    }
 
-    protected abstract void collisionWall();
+    protected void collisionWall(){
+        backStep();
+    }
 
-    protected abstract void collisionBox();
+    protected void collisionBox(){
+        backStep();
+    }
 
     @Override
     public void handleDeath() {
