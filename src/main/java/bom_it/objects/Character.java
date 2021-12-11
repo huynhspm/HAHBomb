@@ -156,7 +156,7 @@ public abstract class Character extends Sprite {
         int index = (int) (new Date().getTime() / 100);
         if (status == IMMORTAL) {
             immortalTime -= 1.0 / App.gameWorld.getFramesPerSecond();
-            if(immortalTime < 0){
+            if (immortalTime < 0) {
                 Enum.STATUS_CHARACTER.setMove(this);
             }
             setVisible(index % 2 + 2 == 1);
@@ -165,7 +165,7 @@ public abstract class Character extends Sprite {
         }
 
         if (status == STUNNED) {
-            stunnedTime-= 1.0 / App.gameWorld.getFramesPerSecond();
+            stunnedTime -= 1.0 / App.gameWorld.getFramesPerSecond();
             if (stunnedTime <= 0) {
                 Enum.STATUS_CHARACTER.setMove(this);
             }
@@ -244,20 +244,20 @@ public abstract class Character extends Sprite {
         }
     }
 
-    protected void collisionItem(Item item){
+    protected void collisionItem(Item item) {
         item.powerUp(this);
         item.handleDeath();
     }
 
-    protected void collisionExplode(){
+    protected void collisionExplode() {
         handleDeath();
     }
 
-    protected void collisionWall(){
+    protected void collisionWall() {
         backStep();
     }
 
-    protected void collisionBox(){
+    protected void collisionBox() {
         backStep();
     }
 

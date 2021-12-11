@@ -21,8 +21,8 @@ public class Map {
     private Images[] wall;
     private Images[] box;
 
-    public static final int[] dx = {0, 1, 0, -1};
-    public static final int[] dy = {-1, 0, 1, 0};
+    public static final int[] dx = {-1, 1, 0, 0};
+    public static final int[] dy = {0, 0, 1, -1};
     public static final int[] NUM_BOX = {30, 40, 50, 60, 70};
 
     private final Square[][] map;

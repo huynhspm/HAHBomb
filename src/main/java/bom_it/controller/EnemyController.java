@@ -42,22 +42,25 @@ public abstract class EnemyController {
                 }
             }
 
-            nextStep = new Pair(enemy.getXInMap() + Map.dx[direct.ordinal()], enemy.getYInMap() + Map.dy[direct.ordinal()]);
-            if (direct != Enum.DIRECTION.oppositeDirect(direction)) {
-                if ((!acrossBox && spritesMap.getMap()[nextStep.getY()][nextStep.getX()].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, BOX, EXPLODE, WALL}))
-                        || (acrossBox && spritesMap.getMap()[nextStep.getY()][nextStep.getX()].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, EXPLODE, WALL}))) {
-                    direction = direct;
-                    exitWay = true;
-                    break;
-                }
+            int nextX = enemy.getXInMap() + Map.dx[direct.ordinal()];
+            int nextY = enemy.getYInMap() + Map.dy[direct.ordinal()];
+            if ((!acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, BOX, EXPLODE, WALL}))
+                    || (acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, EXPLODE, WALL}))) {
+                nextStep = new Pair(nextX, nextY);
+                direction = direct;
+                exitWay = true;
+                break;
             }
         }
 
         if (!exitWay) {
             direction = Enum.DIRECTION.oppositeDirect(direction);
-            nextStep = new Pair(enemy.getXInMap() + Map.dx[direction.ordinal()], enemy.getYInMap() + Map.dy[direction.ordinal()]);
-            if (spritesMap.getMap()[nextStep.getY()][nextStep.getX()].getTypeSprite(BOMB)) {
+            int nextX = enemy.getXInMap() + Map.dx[direction.ordinal()];
+            int nextY = enemy.getYInMap() + Map.dy[direction.ordinal()];
+            if (spritesMap.getMap()[nextY][nextX].getTypeSprite(BOMB)) {
                 nextStep = new Pair(enemy.getXInMap(), enemy.getYInMap());
+            } else {
+                nextStep = new Pair(nextX, nextY);
             }
         }
     }
