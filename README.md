@@ -30,4 +30,5 @@
 ***
 ## Update:
 ### Update 1: Tạo riêng hàm create cho từng objects, tạo class enum riêng để chứa toàn bộ enum
-### Update 2: Tạo cây thừa kế cho EnemyController để thuận tiện cho việc thêm enemy khi thêm level
+### Update 2: Tạo cây thauwf kế cho Item để thuận tiện phát triển về sau khi thêm Item
+### Update 3: Tạo cây thừa kế cho EnemyController và Enemy để thuận tiện phát triển về sau khi thêm enemy mới
