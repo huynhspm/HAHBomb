@@ -1,23 +1,18 @@
 <component name="ArtifactManager">
-  <artifact name="game:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/game_jar</output-path>
-    <root id="root">
-      <element id="archive" name="game.jar">
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="module-output" name="game" />
-      </element>
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:11.0.2" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:win:11.0.2" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:17.0.0.1" />
-      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:17.0.0.1" />
+  <artifact type="jar" name="game:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="game.jar">
+      <element id="module-output" name="game" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/17.0.0.1/javafx-fxml-17.0.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/17.0.0.1/javafx-controls-17.0.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/11.0.2/javafx-media-11.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/11.0.2/javafx-media-11.0.2-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.0.1/javafx-graphics-17.0.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.0.1/javafx-base-17.0.0.1.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
