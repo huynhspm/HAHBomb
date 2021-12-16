@@ -27,6 +27,10 @@
 - level 3: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 1, ăn item như người chơi
 - level 4: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 2, ăn item như người chơi
 - level 5: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 3, ăn item như người chơi
+### 4. Cài đặt và chơi
+- Tải jdk17 tại đây https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+- Cài đặt java vào môi trường máy
+- Chỉ cần download folder PlayGame sau đó mở game.jar để chơi
 ***
 ## Update:
 ### Update 1: Tạo riêng hàm create cho từng objects, tạo class enum riêng để chứa toàn bộ enum
