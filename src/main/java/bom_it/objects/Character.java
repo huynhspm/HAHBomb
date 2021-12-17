@@ -19,7 +19,7 @@ public abstract class Character extends Sprite {
     public static final double STUNNED_TIME = 2;
     private final Images[][] imageCharacter;
 
-    private final double VELOCITY = 0.25;
+    private final double VELOCITY = 0.3;
 
     private final Bomb[] onBomb;
     protected final IntegerProperty lives = new SimpleIntegerProperty(1);
