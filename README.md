@@ -29,7 +29,7 @@
 - level 5: enemy đi thông minh đuổi theo player đặt bomb phá box và giết player, kĩ năng né bomb cấp 3, ăn item như người chơi
 ### 4. Cài đặt và chơi
 - Tải jdk17 (bản jdk17.exe cho window) tại đây https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-- Cài đặt java vào môi trường máy
+- Cài đặt java vào môi trường máy (thường thì chạy bản exe sẽ set up sẵn java cho máy).
 - Chỉ cần download folder PlayGame sau đó mở game.jar để chơi
 ***
 ## Update:
