@@ -33,9 +33,19 @@
 - Chỉ cần download folder PlayGame sau đó mở game.jar để chơi
 ***
 ## Update:
-### Update 1: Tạo riêng hàm create cho từng objects, tạo class enum riêng để chứa toàn bộ enum
-### Update 2: Tạo cây thừa kế cho Item để thuận tiện phát triển về sau khi thêm Item
-### Update 3: Tạo cây thừa kế cho EnemyController và Enemy để thuận tiện phát triển về sau khi thêm enemy mới
+### Update 1: 
+- Ngày 26/11/2021
+- Tạo riêng hàm create cho từng objects, tạo class enum riêng để chứa toàn bộ enum
+### Update 2: 
+Ngày 4/12/2021
+- Tạo cây thừa kế cho Item để thuận tiện phát triển về sau khi thêm Item
+### Update 3: 
+- Ngày 6/12/2021
+- Tạo cây thừa kế cho EnemyController và Enemy để thuận tiện phát triển về sau khi thêm enemy mới
+### Update 4:
+- Ngày 21/12/2021
+- Thêm replay như checkpoint cho người chơi chơi tiếp màn vừa thua
+- sử lý va chạm người và wall, box giảm đi để thuận lợi cho việc di chuyển
 ## Error:
 ### boss level 5 tự sát
 ### map đi liên thông hơi khó
