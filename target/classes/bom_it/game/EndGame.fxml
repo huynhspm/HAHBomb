@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600" prefWidth="860.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bom_it.controller.EndGameController">
+    <ImageView fitHeight="600.0" fitWidth="860.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../picture/Menu.png" />
+    </ImageView>
+    <ImageView fx:id="imageNewGame" fitHeight="80" fitWidth="300" layoutX="80" layoutY="500.0" onMouseClicked="#clickImageNewGame" onMouseEntered="#enterImageNewGame" onMouseExited="#exitImageNewGame" pickOnBounds="true" preserveRatio="true" />
+   <Button layoutX="611.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#clickButtonReplay" text="REPLAY">
+      <font>
+         <Font name="System Bold Italic" size="30.0" />
+      </font>
+   </Button>
+   <Label layoutX="314.0" layoutY="249.0" text="YOU LOSS">
+      <font>
+         <Font name="System Bold Italic" size="49.0" />
+      </font>
+   </Label>
+</AnchorPane>
