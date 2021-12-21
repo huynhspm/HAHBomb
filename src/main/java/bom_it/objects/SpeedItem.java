@@ -12,6 +12,8 @@ public class SpeedItem extends Item {
 
     @Override
     protected void powerUp(Character character) {
-        character.powerSpeedProperty().setValue(Math.min(character.getPowerSpeed() + 1, MAX_POWER_SPEED));
+        if(character.powerSpeedProperty().getValue() < MAX_POWER_SPEED){
+            character.increasePowerSpeed();
+        }
     }
 }

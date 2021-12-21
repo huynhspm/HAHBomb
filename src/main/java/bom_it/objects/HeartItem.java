@@ -12,6 +12,6 @@ public class HeartItem extends Item {
 
     @Override
     protected void powerUp(Character character) {
-        character.livesProperty().setValue(character.getLives() + 1);
+        character.increaseLives();
     }
 }

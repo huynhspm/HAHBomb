@@ -7,8 +7,11 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+import java.io.FileInputStream;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import static bom_it.game.App.setRoot;
@@ -19,13 +22,35 @@ public class TheGame extends GameWorld {
     public static final int HEIGHT = 600;
     public static final int WIDTH = 680;
     public static final int SIZE_A_SQUARE = 40;
-    private final int MAX_LEVEL = 5;
+    public static final int fps = 60;
+    private static final int MAX_LEVEL = 5;
+
+    public static void  init(){
+        App.gameWorld = new TheGame("HAH BOM", fps);
+        App.gameWorld.begin();
+    }
 
     public TheGame(String title, int framesPerSecond) {
         super(framesPerSecond);
         musicGame = new MusicGame("src/main/resources/bom_it/Music/music.mp3");
         soundEffectGame = new SoundEffectGame("src/main/resources/bom_it/Music/sound_effect.wav");
         musicGame.play();
+        level = importLevelFromFile();
+    }
+
+    private int importLevelFromFile() {
+        String url = "src/main/resources/bom_it/map/level-map.txt";
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(url);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Scanner input = new Scanner(Objects.requireNonNull(fileInputStream));
+        String level = input.nextLine();
+
+        return (level.charAt(7) - '0' - 1);
     }
 
     @Override
@@ -55,7 +80,7 @@ public class TheGame extends GameWorld {
         if (status.getValue() == LOSS.ordinal() && timeLWP < 0) {
             shutdown();
             sleep();
-            App.setRoot("Menu");
+            App.setRoot("EndGame");
             return;
         }
 

@@ -36,7 +36,6 @@ public abstract class GameWorld {
     public GameWorld(int framesPerSecond) {
         this.framesPerSecond = framesPerSecond;
         sceneSprites = new Group();
-        level = 0;
         isNextLevel = false;
         buildGameLoop();
     }

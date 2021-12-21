@@ -311,7 +311,7 @@ public class Map {
     }
 
     private boolean checkDangerInDirection(int x, int y, Enum.DIRECTION direct) {
-        for (int i = 1; i <= FlameItem.MAX_POWER_BOM; ++i) {
+        for (int i = 1; i <= FlameItem.MAX_POWER_BOMB; ++i) {
             x += dx[direct.ordinal()];
             y += dy[direct.ordinal()];
 

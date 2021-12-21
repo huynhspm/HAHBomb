@@ -30,7 +30,7 @@ public class Sprite extends ImageView implements Comparable<Sprite> {
         if (typeSprite == ENEMY || typeSprite == PLAYER) {
             double approximateUp = 14;
             double approximateLeft = 10;
-            double approximateDown = 6;
+            double approximateDown = 10;
             double approximateRight = 10;
             collisionBound = new Rectangle(coordinateX + approximateLeft, coordinateY + approximateUp,
                     SIZE - approximateLeft - approximateRight, SIZE - approximateUp - approximateDown);

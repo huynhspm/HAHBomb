@@ -37,8 +37,19 @@ public abstract class Character extends Sprite {
     protected Enum.STATUS_CHARACTER status = MOVE;
 
     // getter and setter
-    protected void increaseNumBomb() {
+    public void increaseNumBomb() {
         numBomb.setValue(numBomb.getValue() + 1);
+    }
+    public void increasePowerBomb(){
+        powerBomb.setValue(powerBomb.getValue() + 1);
+    }
+
+    public void increaseLives(){
+        lives.setValue(lives.getValue() + 1);
+    }
+
+    public void increasePowerSpeed(){
+        powerSpeed.setValue(powerSpeed.getValue() + 1);
     }
 
     protected Bomb[] getOnBomb() {
@@ -83,22 +94,6 @@ public abstract class Character extends Sprite {
 
     public IntegerProperty powerSpeedProperty() {
         return powerSpeed;
-    }
-
-    public int getLives() {
-        return lives.get();
-    }
-
-    public int getNumBomb() {
-        return numBomb.get();
-    }
-
-    public int getPowerBomb() {
-        return powerBomb.get();
-    }
-
-    public int getPowerSpeed() {
-        return powerSpeed.get();
     }
 
     public Image getImageInfo() {
@@ -281,10 +276,10 @@ public abstract class Character extends Sprite {
     // set up bomb
     public void storeBomb() {
         if (numBomb.getValue() > 0) {
-            numBomb.setValue(numBomb.getValue() - 1);
             int x = getXSetBomb();
             int y = getYSetBomb();
             if (!App.gameWorld.getSpritesMap().getMap()[y][x].getTypeSprite(BOMB)) {
+                numBomb.setValue(numBomb.getValue() - 1);
                 App.gameWorld.spawn(new Bomb(x, y, this));
             }
         }

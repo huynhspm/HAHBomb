@@ -11,6 +11,6 @@ public class BombItem extends Item {
 
     @Override
     protected void powerUp(Character character) {
-        character.numBombProperty().setValue(character.getNumBomb() + 1);
+        character.increaseNumBomb();
     }
 }

@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -44,13 +47,21 @@ public class MenuController implements Initializable {
 
     @FXML
     private void clickImageStart() {
-        App.gameWorld = new TheGame("HAH BOM", 60);
-        App.gameWorld.begin();
+        TheGame.init();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         imageStart.setImage(buttonStart[0].getImage());
         imageInstruct.setImage(buttonInstruct[0].getImage());
+
+        try {
+            FileOutputStream outputStream = new FileOutputStream("src/main/resources/bom_it/map/level-map.txt");
+            String level = "level: 1\n";
+            outputStream.write(level.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
