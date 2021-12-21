@@ -1,5 +1,5 @@
 # HAHBomb
-### Lớp : 2122I_INT2204_2 - Nhóm : N1 - Trịnh Ngọc Huỳnh 20020054 - Phạm Huy Hoàng 20020053 - Nguyễn Thế Anh 20020096
+### Trịnh Ngọc Huỳnh - Phạm Huy Hoàng - Nguyễn Thế Anh - học kỳ 1 năm 2
 ***
 ## Giới thiệu HAH BOMB
 ### 1. Các đối tượng:
