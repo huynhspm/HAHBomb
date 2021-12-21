@@ -47,5 +47,5 @@ Ngày 4/12/2021
 - Thêm replay như checkpoint cho người chơi chơi tiếp màn vừa thua
 - sử lý va chạm người và wall, box giảm đi để thuận lợi cho việc di chuyển
 ## Error:
-### boss level 5 tự sát
+### boss level 4 tự sát
 ### map đi liên thông hơi khó
