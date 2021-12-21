@@ -53,7 +53,11 @@ public class Enum {
     }
 
     public enum STATUS_GAME {
-        LOSS, WIN, PASS_LEVEL, PLAY;
+        LOSS, WIN, PASS_LEVEL, PLAY, PAUSE;
+
+        public static void setPause(GameWorld game) {
+            game.setStatus(PAUSE.ordinal());
+        }
 
         public static void setLoss(GameWorld game) {
             game.setStatus(LOSS.ordinal());

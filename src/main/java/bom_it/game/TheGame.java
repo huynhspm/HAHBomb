@@ -174,7 +174,9 @@ public class TheGame extends GameWorld {
                 player.setMoveUp(true);
             }
             if (keyEvent.getCode() == KeyCode.SPACE || keyEvent.getCode() == KeyCode.ENTER) {
-                player.storeBomb();
+                if(status.getValue() != PAUSE.ordinal()) {
+                    player.storeBomb();
+                }
             }
         };
         App.scene.setOnKeyPressed(playerMovePress);
