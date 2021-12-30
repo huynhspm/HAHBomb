@@ -1,14 +1,15 @@
 package bom_it.controller;
 
+import bom_it.Enum.Direction;
+import bom_it.Enum.TypeSprite;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import bom_it.game.Map;
 import bom_it.objects.Enemy;
 
 import java.util.*;
 
-import static bom_it.game.Enum.DIRECTION.*;
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.Direction.*;
+import static bom_it.Enum.TypeSprite.*;
 
 public abstract class EnemyController {
     // this enemy to control
@@ -19,7 +20,7 @@ public abstract class EnemyController {
 
     protected Pair nextStep;
 
-    protected Enum.DIRECTION direction;
+    protected Direction direction;
 
     public EnemyController(Enemy enemy) {
         this.enemy = enemy;
@@ -31,12 +32,12 @@ public abstract class EnemyController {
     //find random way
     protected void findRandomWay(boolean acrossBox) {
         boolean exitWay = false;
-        boolean[] used = new boolean[Enum.DIRECTION.values().length];
+        boolean[] used = new boolean[Direction.values().length];
         for (int i = 0; i < 3; ++i) {
-            Enum.DIRECTION direct;
+            Direction direct;
             while (true) {
-                direct = Enum.DIRECTION.values()[Math.abs(new Random().nextInt() % 4)];
-                if (direct != Enum.DIRECTION.oppositeDirect(direction) && !used[direct.ordinal()]) {
+                direct = Direction.values()[Math.abs(new Random().nextInt() % 4)];
+                if (direct != Direction.oppositeDirect(direction) && !used[direct.ordinal()]) {
                     used[direct.ordinal()] = true;
                     break;
                 }
@@ -44,8 +45,8 @@ public abstract class EnemyController {
 
             int nextX = enemy.getXInMap() + Map.dx[direct.ordinal()];
             int nextY = enemy.getYInMap() + Map.dy[direct.ordinal()];
-            if ((!acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, BOX, EXPLODE, WALL}))
-                    || (acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, EXPLODE, WALL}))) {
+            if ((!acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new TypeSprite[]{BOMB, BOX, EXPLODE, WALL}))
+                    || (acrossBox && spritesMap.getMap()[nextY][nextX].checkNotExist(new TypeSprite[]{BOMB, EXPLODE, WALL}))) {
                 nextStep = new Pair(nextX, nextY);
                 direction = direct;
                 exitWay = true;
@@ -54,7 +55,7 @@ public abstract class EnemyController {
         }
 
         if (!exitWay) {
-            direction = Enum.DIRECTION.oppositeDirect(direction);
+            direction = Direction.oppositeDirect(direction);
             int nextX = enemy.getXInMap() + Map.dx[direction.ordinal()];
             int nextY = enemy.getYInMap() + Map.dy[direction.ordinal()];
             if (spritesMap.getMap()[nextY][nextX].getTypeSprite(BOMB)) {
@@ -89,13 +90,13 @@ public abstract class EnemyController {
                 break;
             }
 
-            for (Enum.DIRECTION direct : Enum.DIRECTION.values()) {
+            for (Direction direct : Direction.values()) {
                 int X = cur.getX() + Map.dx[direct.ordinal()];
                 int Y = cur.getY() + Map.dy[direct.ordinal()];
                 if (spritesMap.checkSquareInMap(X, Y) && dis[Y][X] == Integer.MAX_VALUE) {
                     dis[Y][X] = dis[cur.getY()][cur.getX()] + 1;
                     if (dis[Y][X] <= 1) {
-                        if ((!spritesMap.checkDanger(X, Y) && spritesMap.getMap()[Y][X].checkNotExist(new Enum.TYPE_SPRITE[]{EXPLODE, WALL, BOX}))) {
+                        if ((!spritesMap.checkDanger(X, Y) && spritesMap.getMap()[Y][X].checkNotExist(new TypeSprite[]{EXPLODE, WALL, BOX}))) {
                             way.addLast(new Pair(X, Y));
                             last[Y][X] = new Pair(cur.getX(), cur.getY());
                         }
@@ -140,11 +141,11 @@ public abstract class EnemyController {
             }
 
             visited[cur.getY()][cur.getX()] = true;
-            for (int i = 0; i < Enum.DIRECTION.values().length; ++i) {
+            for (int i = 0; i < Direction.values().length; ++i) {
                 int X = cur.getX() + Map.dx[i];
                 int Y = cur.getY() + Map.dy[i];
                 if (spritesMap.checkSquareInMap(X, Y) && !visited[Y][X]
-                        && spritesMap.getMap()[Y][X].checkNotExist(new Enum.TYPE_SPRITE[]{BOMB, BOX, EXPLODE, WALL})) {
+                        && spritesMap.getMap()[Y][X].checkNotExist(new TypeSprite[]{BOMB, BOX, EXPLODE, WALL})) {
                     if ((safe >= 1 && spritesMap.checkDanger(X, Y)) ||
                             (safe >= 2 && spritesMap.getMap()[Y][X].getTypeSprite(PLAYER))) {
                         continue;
@@ -176,7 +177,7 @@ public abstract class EnemyController {
         }
 
         boolean exist = false;
-        for (Enum.DIRECTION direct : Enum.DIRECTION.values()) {
+        for (Direction direct : Direction.values()) {
             int x = enemy.getXInMap() + Map.dx[direct.ordinal()];
             int y = enemy.getYInMap() + Map.dy[direct.ordinal()];
             if ((destroyPlayer && spritesMap.getMap()[y][x].getTypeSprite(PLAYER))
@@ -202,12 +203,16 @@ public abstract class EnemyController {
         setStatic();
         if (enemy.getYInMap() < nextStep.getY()) {
             enemy.setMoveDown(true);
+            direction = DOWN;
         } else if (enemy.getYInMap() > nextStep.getY()) {
             enemy.setMoveUp(true);
+            direction = UP;
         } else if (enemy.getXInMap() < nextStep.getX()) {
             enemy.setMoveRight(true);
+            direction = RIGHT;
         } else if (enemy.getXInMap() > nextStep.getX()) {
             enemy.setMoveLeft(true);
+            direction = LEFT;
         }
     }
 

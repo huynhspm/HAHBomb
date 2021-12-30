@@ -1,5 +1,8 @@
 package bom_it.game;
 
+import bom_it.Enum.Direction;
+import bom_it.Enum.TypeMap;
+import bom_it.Enum.TypeSprite;
 import bom_it.controller.Pair;
 import bom_it.engine.Images;
 import bom_it.engine.Sprite;
@@ -11,12 +14,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static bom_it.game.Enum.DIRECTION.*;
-import static bom_it.game.Enum.TYPE_MAP.CLASSROOM;
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.Direction.*;
+import static bom_it.Enum.TypeMap.CLASSROOM;
+import static bom_it.Enum.TypeSprite.*;
 
 public class Map {
-    public static Enum.TYPE_MAP type = CLASSROOM;
+    public static TypeMap type = CLASSROOM;
     private Images background;
     private Images[] wall;
     private Images[] box;
@@ -310,7 +313,7 @@ public class Map {
         return (0 <= x && x < width && 0 < y && y < height);
     }
 
-    private boolean checkDangerInDirection(int x, int y, Enum.DIRECTION direct) {
+    private boolean checkDangerInDirection(int x, int y, Direction direct) {
         for (int i = 1; i <= FlameItem.MAX_POWER_BOMB; ++i) {
             x += dx[direct.ordinal()];
             y += dy[direct.ordinal()];
@@ -319,7 +322,7 @@ public class Map {
                 break;
             }
 
-            if (!map[y][x].checkNotExist(new Enum.TYPE_SPRITE[]{BOX, BOMB, WALL})) {
+            if (!map[y][x].checkNotExist(new TypeSprite[]{BOX, BOMB, WALL})) {
                 return (map[y][x].getPowerBomb() >= i);
             }
         }

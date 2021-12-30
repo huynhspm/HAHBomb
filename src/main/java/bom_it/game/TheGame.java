@@ -1,5 +1,6 @@
 package bom_it.game;
 
+import bom_it.Enum.StatusGame;
 import bom_it.engine.GameWorld;
 import bom_it.engine.Sprite;
 import bom_it.objects.*;
@@ -14,9 +15,9 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import static bom_it.Enum.TypeSprite.*;
 import static bom_it.game.App.setRoot;
-import static bom_it.game.Enum.STATUS_GAME.*;
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.StatusGame.*;
 
 public class TheGame extends GameWorld {
     public static final int HEIGHT = 600;
@@ -67,7 +68,7 @@ public class TheGame extends GameWorld {
             sceneSprites.getChildren().clear();
             isNextLevel = false;
             level++;
-            Enum.STATUS_GAME.setPlay(this);
+            StatusGame.setPlay(this);
             timeLeft.setValue(18000);
             generateMap();
             setRoot("GameSurface");
@@ -85,7 +86,7 @@ public class TheGame extends GameWorld {
         }
 
         if ((player != null && player.livesProperty().getValue() <= 0) || timeLeft.getValue() < 0) {
-            Enum.STATUS_GAME.setLoss(this);
+            StatusGame.setLoss(this);
         }
     }
 
@@ -98,7 +99,7 @@ public class TheGame extends GameWorld {
         }
 
         if (level >= MAX_LEVEL) {
-            Enum.STATUS_GAME.setWin(this);
+            StatusGame.setWin(this);
             return true;
         }
         return false;
@@ -121,7 +122,7 @@ public class TheGame extends GameWorld {
 
         if (spritesMap == null || spritesMap.getMap()[player.getYInMap()][player.getXInMap()].getTypeSprite(PORTAL)) {
             if (!executeWin()) {
-                Enum.STATUS_GAME.setPassLevel(this);
+                StatusGame.setPassLevel(this);
             }
         }
     }

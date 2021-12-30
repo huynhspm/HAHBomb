@@ -6,7 +6,7 @@ import bom_it.game.App;
 
 import java.util.Date;
 
-import static bom_it.game.Enum.TYPE_SPRITE.BOMB;
+import static bom_it.Enum.TypeSprite.*;
 
 public class Bomb extends Sprite {
     private static final Images[] BOMB_IMAGE = Images.bomb;

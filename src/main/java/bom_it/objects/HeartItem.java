@@ -2,7 +2,7 @@ package bom_it.objects;
 
 import bom_it.engine.Images;
 
-import static bom_it.game.Enum.TYPE_ITEM.HEART_ITEM;
+import static bom_it.Enum.TypeItem.HEART_ITEM;
 
 public class HeartItem extends Item {
 

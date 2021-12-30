@@ -1,6 +1,6 @@
 package bom_it.controller;
 
-import bom_it.game.Enum;
+import bom_it.Enum.StatusGame;
 import bom_it.engine.Images;
 import bom_it.game.App;
 import bom_it.objects.Character;
@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static bom_it.game.Enum.STATUS_GAME.*;
+import static bom_it.Enum.StatusGame.*;
 
 public class GameSurfaceController implements Initializable {
     private final Images information = Images.information;
@@ -93,13 +93,13 @@ public class GameSurfaceController implements Initializable {
         iconContinue.setOnMouseClicked(mouseEvent -> {
             iconContinue.setVisible(false);
             iconPause.setVisible(true);
-            Enum.STATUS_GAME.setPlay(App.gameWorld);
+            StatusGame.setPlay(App.gameWorld);
             App.gameWorld.begin();
         });
         iconPause.setOnMouseClicked(mouseEvent -> {
             iconPause.setVisible(false);
             iconContinue.setVisible(true);
-            Enum.STATUS_GAME.setPause(App.gameWorld);
+            StatusGame.setPause(App.gameWorld);
             App.gameWorld.pause();
         });
 

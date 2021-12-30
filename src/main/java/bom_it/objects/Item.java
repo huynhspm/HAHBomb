@@ -1,15 +1,15 @@
 package bom_it.objects;
 
+import bom_it.Enum.TypeItem;
 import bom_it.engine.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import javafx.scene.image.Image;
 
 import java.util.Date;
 import java.util.Random;
 
-import static bom_it.game.Enum.TYPE_SPRITE.ITEM;
+import static bom_it.Enum.TypeSprite.*;
 
 public abstract class Item extends Sprite {
     private final Images[] imageItem;
@@ -18,7 +18,7 @@ public abstract class Item extends Sprite {
         int random = Math.abs(new Random().nextInt()) % 20;
         int index = (random < 1) ? 1 : (random < 5) ? 0 : (random < 9) ? 2 : (random < 13) ? 3 : 4;
         if(index < 4) {
-            switch (Enum.TYPE_ITEM.values()[index]) {
+            switch (TypeItem.values()[index]) {
                 case HEART_ITEM -> App.gameWorld.spawn(new HeartItem(xInMap, yInMap));
                 case FLAME_ITEM -> App.gameWorld.spawn(new FlameItem(xInMap, yInMap));
                 case BOMB_ITEM -> App.gameWorld.spawn(new BombItem(xInMap, yInMap));

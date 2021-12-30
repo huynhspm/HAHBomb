@@ -1,11 +1,11 @@
 package bom_it.objects;
 
+import bom_it.Enum.StatusCharacter;
 import bom_it.controller.EnemyLevel1Controller;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
-import bom_it.game.Enum;
 
-import static bom_it.game.Enum.STATUS_CHARACTER.IMMORTAL;
+import static bom_it.Enum.StatusCharacter.IMMORTAL;
 
 public class EnemyLevel1 extends Enemy{
     public EnemyLevel1(int xInMap, int yInMap) {
@@ -18,7 +18,7 @@ public class EnemyLevel1 extends Enemy{
         super.executeCollision();
         for (Sprite sprite : App.gameWorld.sprites()) {
             if (this.checkCollision(sprite) && sprite instanceof Player && ((Player) sprite).status != IMMORTAL) {
-                Enum.STATUS_CHARACTER.setStunned((Character) sprite);
+                StatusCharacter.setStunned((Character) sprite);
             }
         }
     }

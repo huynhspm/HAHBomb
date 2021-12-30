@@ -1,8 +1,8 @@
 package bom_it.controller;
 
+import bom_it.Enum.TypePlayer;
 import bom_it.engine.Images;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import bom_it.objects.Player;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static bom_it.game.Enum.DIRECTION.DOWN;
+import static bom_it.Enum.Direction.DOWN;
 
 public class ChooseCharacterController implements Initializable {
     private final Images[] buttonContinue = Images.buttonContinue;
@@ -68,7 +68,7 @@ public class ChooseCharacterController implements Initializable {
                 imageView.setFitHeight(90);
                 imageView.setFitWidth(60);
 
-                Enum.TYPE_PLAYER type = Enum.TYPE_PLAYER.values()[i * 4 + j];
+                TypePlayer type = TypePlayer.values()[i * 4 + j];
                 imageView.setOnMouseClicked(mouseEvent -> {
                     Player.type = type;
                     imagePlayer.setImage(Images.boomer[Player.type.ordinal()][DOWN.ordinal()][0].getImage());

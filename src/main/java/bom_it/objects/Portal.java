@@ -6,7 +6,7 @@ import bom_it.game.App;
 
 import java.util.Date;
 
-import static bom_it.game.Enum.TYPE_SPRITE.PORTAL;
+import static bom_it.Enum.TypeSprite.PORTAL;
 
 public class Portal extends Sprite {
     private static final Images[] PORTAL_IMAGE = Images.portal;

@@ -3,7 +3,7 @@ package bom_it.objects;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
 
-import static bom_it.game.Enum.TYPE_SPRITE.BACKGROUND;
+import static bom_it.Enum.TypeSprite.BACKGROUND;
 
 public class Background extends Sprite {
     public static void createBackground(int xInMap, int yInMap){

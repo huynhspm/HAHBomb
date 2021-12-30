@@ -13,7 +13,7 @@ import javafx.util.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static bom_it.game.Enum.STATUS_GAME.PLAY;
+import static bom_it.Enum.StatusGame.PLAY;
 
 public abstract class GameWorld {
     public static int TIME_LWP = 2;

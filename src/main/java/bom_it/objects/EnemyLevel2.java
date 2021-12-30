@@ -1,6 +1,5 @@
 package bom_it.objects;
 
-import bom_it.controller.EnemyController;
 import bom_it.controller.EnemyLevel2Controller;
 
 public class EnemyLevel2 extends Enemy{

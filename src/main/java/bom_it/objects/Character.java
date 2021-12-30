@@ -1,18 +1,19 @@
 package bom_it.objects;
 
+import bom_it.Enum.StatusCharacter;
+import bom_it.Enum.TypeSprite;
 import bom_it.engine.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.image.Image;
 
 import java.util.Date;
 
-import static bom_it.game.Enum.DIRECTION.*;
-import static bom_it.game.Enum.STATUS_CHARACTER.*;
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.Direction.*;
+import static bom_it.Enum.TypeSprite.BOMB;
+import static bom_it.Enum.StatusCharacter.*;
 
 public abstract class Character extends Sprite {
     public static final double IMMORTAL_TIME = 3;
@@ -34,7 +35,7 @@ public abstract class Character extends Sprite {
 
     private double immortalTime;
     private double stunnedTime;
-    protected Enum.STATUS_CHARACTER status = MOVE;
+    protected StatusCharacter status = MOVE;
 
     // getter and setter
     public void increaseNumBomb() {
@@ -108,12 +109,12 @@ public abstract class Character extends Sprite {
         this.immortalTime = immortalTime;
     }
 
-    public void setStatus(Enum.STATUS_CHARACTER status) {
+    public void setStatus(StatusCharacter status) {
         this.status = status;
     }
 
     // Constructor
-    public Character(Image image, int xInMap, int yInMap, Enum.TYPE_SPRITE typeSprite, Images[][] imageCharacter) {
+    public Character(Image image, int xInMap, int yInMap, TypeSprite typeSprite, Images[][] imageCharacter) {
         super(image, xInMap, yInMap, typeSprite);
         onBomb = new Bomb[]{null, null};
         this.imageCharacter = imageCharacter;
@@ -152,7 +153,7 @@ public abstract class Character extends Sprite {
         if (status == IMMORTAL) {
             immortalTime -= 1.0 / App.gameWorld.getFramesPerSecond();
             if (immortalTime < 0) {
-                Enum.STATUS_CHARACTER.setMove(this);
+                StatusCharacter.setMove(this);
             }
             setVisible(index % 2 + 2 == 1);
         } else {
@@ -162,7 +163,7 @@ public abstract class Character extends Sprite {
         if (status == STUNNED) {
             stunnedTime -= 1.0 / App.gameWorld.getFramesPerSecond();
             if (stunnedTime <= 0) {
-                Enum.STATUS_CHARACTER.setMove(this);
+                StatusCharacter.setMove(this);
             }
             return;
         }
@@ -259,7 +260,7 @@ public abstract class Character extends Sprite {
     @Override
     public void handleDeath() {
         lives.setValue(lives.getValue() - 1);
-        Enum.STATUS_CHARACTER.setImmortal(this);
+        StatusCharacter.setImmortal(this);
         if (lives.getValue() <= 0) {
             super.handleDeath();
         }

@@ -9,8 +9,8 @@ import bom_it.game.App;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static bom_it.game.Enum.DIRECTION.DOWN;
-import static bom_it.game.Enum.TYPE_SPRITE.ENEMY;
+import static bom_it.Enum.Direction.DOWN;
+import static bom_it.Enum.TypeSprite.ENEMY;
 
 public abstract class Enemy extends Character {
     protected EnemyController controller;

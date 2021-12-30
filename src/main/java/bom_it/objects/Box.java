@@ -5,7 +5,8 @@ import bom_it.game.App;
 
 import java.util.Random;
 
-import static bom_it.game.Enum.TYPE_SPRITE.BOX;
+import static bom_it.Enum.TypeSprite.BOX;
+
 
 public class Box extends Sprite {
     public static void createBox(int xInMap, int yInMap){

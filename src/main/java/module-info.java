@@ -13,4 +13,5 @@ module bom_it.game {
     exports bom_it.engine;
     exports bom_it.controller;
     exports bom_it.objects;
+    exports bom_it.Enum;
 }

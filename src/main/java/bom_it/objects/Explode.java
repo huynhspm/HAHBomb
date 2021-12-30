@@ -4,7 +4,7 @@ import bom_it.engine.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
 
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.TypeSprite.*;
 
 public class Explode extends Sprite {
     private static final double DEATH_TIME = 0.3;

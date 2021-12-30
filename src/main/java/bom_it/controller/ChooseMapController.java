@@ -1,8 +1,8 @@
 package bom_it.controller;
 
+import bom_it.Enum.TypeMap;
 import bom_it.engine.Images;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import bom_it.game.Map;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,7 +33,7 @@ public class ChooseMapController implements Initializable {
 
     @FXML
     private void clickImageBehind() {
-        Map.type = Enum.TYPE_MAP.values()[(Map.type.ordinal() + 1) % Enum.TYPE_MAP.values().length];
+        Map.type = TypeMap.values()[(Map.type.ordinal() + 1) % TypeMap.values().length];
         imageMap.setImage(listImageMap[Map.type.ordinal()].getImage());
     }
 
@@ -49,7 +49,7 @@ public class ChooseMapController implements Initializable {
 
     @FXML
     private void clickImageFront() {
-        Map.type = Enum.TYPE_MAP.values()[(Map.type.ordinal() - 1 + Enum.TYPE_MAP.values().length) % Enum.TYPE_MAP.values().length];
+        Map.type = TypeMap.values()[(Map.type.ordinal() - 1 + TypeMap.values().length) % TypeMap.values().length];
         imageMap.setImage(listImageMap[Map.type.ordinal()].getImage());
     }
 

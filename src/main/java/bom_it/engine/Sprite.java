@@ -1,19 +1,19 @@
 package bom_it.engine;
 
+import bom_it.Enum.TypeSprite;
 import bom_it.game.App;
-import bom_it.game.Enum;
 import bom_it.game.TheGame;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
-import static bom_it.game.Enum.TYPE_SPRITE.*;
+import static bom_it.Enum.TypeSprite.*;
 
 public class Sprite extends ImageView implements Comparable<Sprite> {
     protected final int SIZE = TheGame.SIZE_A_SQUARE;
 
     // type of sprite.
-    private final Enum.TYPE_SPRITE typeSprite;
+    private final TypeSprite typeSprite;
 
     protected int xInMap, yInMap;
 
@@ -21,7 +21,7 @@ public class Sprite extends ImageView implements Comparable<Sprite> {
     public final Rectangle collisionBound;
 
     // constructor
-    protected Sprite(Image image, int xInMap, int yInMap, Enum.TYPE_SPRITE typeSprite) {
+    protected Sprite(Image image, int xInMap, int yInMap, TypeSprite typeSprite) {
         this.xInMap = xInMap;
         this.yInMap = yInMap;
         double coordinateX = xInMap * SIZE;
@@ -45,7 +45,7 @@ public class Sprite extends ImageView implements Comparable<Sprite> {
     }
 
     // getter
-    public Enum.TYPE_SPRITE getTypeSprite() {
+    public TypeSprite getTypeSprite() {
         return typeSprite;
     }
 

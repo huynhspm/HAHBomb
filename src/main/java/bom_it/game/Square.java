@@ -1,6 +1,8 @@
 package bom_it.game;
 
-import static bom_it.game.Enum.TYPE_SPRITE.BACKGROUND;
+import bom_it.Enum.TypeSprite;
+
+import static bom_it.Enum.TypeSprite.BACKGROUND;
 
 public class Square {
     boolean[] typeSprite;
@@ -8,7 +10,7 @@ public class Square {
 
     // constructor
     public Square() {
-        typeSprite = new boolean[Enum.TYPE_SPRITE.values().length];
+        typeSprite = new boolean[TypeSprite.values().length];
     }
 
     // setter and getter
@@ -20,22 +22,22 @@ public class Square {
         return powerBomb;
     }
 
-    public void add(Enum.TYPE_SPRITE type) {
+    public void add(TypeSprite type) {
         typeSprite[type.ordinal()] = true;
     }
 
-    public void remove(Enum.TYPE_SPRITE type) {
+    public void remove(TypeSprite type) {
         typeSprite[type.ordinal()] = false;
     }
 
 
-    public boolean getTypeSprite(Enum.TYPE_SPRITE type) {
+    public boolean getTypeSprite(TypeSprite type) {
         return typeSprite[type.ordinal()];
     }
 
     // check empty of square (except background)
     public boolean checkEmpty() {
-        for (int i = 1; i < Enum.TYPE_SPRITE.values().length; ++i) {
+        for (int i = 1; i < TypeSprite.values().length; ++i) {
             if (i != BACKGROUND.ordinal() && typeSprite[i]) {
                 return false;
             }
@@ -44,8 +46,8 @@ public class Square {
         return true;
     }
 
-    public boolean checkNotExist(Enum.TYPE_SPRITE[] typeSprites) {
-        for (Enum.TYPE_SPRITE type : typeSprites) {
+    public boolean checkNotExist(TypeSprite[] typeSprites) {
+        for (TypeSprite type : typeSprites) {
             if (typeSprite[type.ordinal()]) {
                 return false;
             }

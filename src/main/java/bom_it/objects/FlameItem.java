@@ -2,7 +2,7 @@ package bom_it.objects;
 
 import bom_it.engine.Images;
 
-import static bom_it.game.Enum.TYPE_ITEM.FLAME_ITEM;
+import static bom_it.Enum.TypeItem.FLAME_ITEM;
 
 public class FlameItem extends Item {
     public static final int MAX_POWER_BOMB = 4;

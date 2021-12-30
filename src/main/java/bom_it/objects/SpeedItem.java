@@ -2,7 +2,8 @@ package bom_it.objects;
 
 import bom_it.engine.Images;
 
-import static bom_it.game.Enum.TYPE_ITEM.SPEED_ITEM;
+import static bom_it.Enum.TypeItem.SPEED_ITEM;
+
 
 public class SpeedItem extends Item {
     private static final int MAX_POWER_SPEED = 10;

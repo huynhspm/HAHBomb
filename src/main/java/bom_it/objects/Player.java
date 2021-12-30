@@ -1,15 +1,15 @@
 package bom_it.objects;
 
+import bom_it.Enum.TypePlayer;
 import bom_it.engine.Images;
 import bom_it.game.App;
-import bom_it.game.Enum;
 
-import static bom_it.game.Enum.DIRECTION.DOWN;
-import static bom_it.game.Enum.TYPE_PLAYER.BLUE;
-import static bom_it.game.Enum.TYPE_SPRITE.PLAYER;
+import static bom_it.Enum.Direction.DOWN;
+import static bom_it.Enum.TypePlayer.BLUE;
+import static bom_it.Enum.TypeSprite.PLAYER;
 
 public class Player extends Character {
-    public static Enum.TYPE_PLAYER type = BLUE;
+    public static TypePlayer type = BLUE;
 
     public static Player createPlayer(int xInMap, int yInMap) {
         Player player = new Player(xInMap, yInMap);

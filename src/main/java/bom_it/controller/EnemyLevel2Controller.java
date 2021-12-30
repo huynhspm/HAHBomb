@@ -2,7 +2,7 @@ package bom_it.controller;
 
 import bom_it.objects.Enemy;
 
-import static bom_it.game.Enum.TYPE_SPRITE.BOMB;
+import static bom_it.Enum.TypeSprite.*;
 
 public class EnemyLevel2Controller extends EnemyController {
 

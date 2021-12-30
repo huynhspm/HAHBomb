@@ -5,7 +5,7 @@ import bom_it.game.App;
 
 import java.util.Random;
 
-import static bom_it.game.Enum.TYPE_SPRITE.WALL;
+import static bom_it.Enum.TypeSprite.WALL;
 
 public class Wall extends Sprite {
     public static void createWall(int xInMap, int yInMap){
