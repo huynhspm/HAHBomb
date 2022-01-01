@@ -7,14 +7,14 @@
 - Box: ô có thể phá đươc bằng bomb để nhặt item
 - Item: có 4 loại item
   - Heart: + 1 mạng
-      +) Flame: + 1 độ rộng của explode do bomb gây ra (Max = 4)
-      +) Bomb:  + 1 số lượng quả bomb được đặt tối đa liên tiếp (sau khi 1 quả bomb do người nào đặt nổ thì số lượng bomb lại hồi)
-      +) Speed: + 1 tốc độ (Max nhặt 4 giày)
+  - Flame: + 1 độ rộng của explode do bomb gây ra (Max = 4)
+  - Bomb:  + 1 số lượng quả bomb được đặt tối đa liên tiếp (sau khi 1 quả bomb do người nào đặt nổ thì số lượng bomb lại hồi)
+  - Speed: + 1 tốc độ (Max nhặt 4 giày)
 - Background: nền của các ô
 - Bomb: đối tượng bomb do character tạo ra
 - Character: có 2 loại
-      +) Enemy: kẻ địch, chức năng thay đổi qua các level
-      +) Player: người chơi di chuyển và đặt bomb trong phần 2 - Cách chơi
+  - Enemy: kẻ địch, chức năng thay đổi qua các level
+  - Player: người chơi di chuyển và đặt bomb trong phần 2 - Cách chơi
 - Explode: vụ nổ sao bị bomb nổ tạo ra
 - Portal: cổng dịch chuyển để qua level sao khi giết hết enemy
 ### 2. Cách chơi
