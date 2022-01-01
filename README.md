@@ -6,7 +6,7 @@
 - Wall: ô không được đi vào
 - Box: ô có thể phá đươc bằng bomb để nhặt item
 - Item: có 4 loại item
-      +) Heart: + 1 mạng
+      - [Heart: + 1 mạng]
       +) Flame: + 1 độ rộng của explode do bomb gây ra (Max = 4)
       +) Bomb:  + 1 số lượng quả bomb được đặt tối đa liên tiếp (sau khi 1 quả bomb do người nào đặt nổ thì số lượng bomb lại hồi)
       +) Speed: + 1 tốc độ (Max nhặt 4 giày)
