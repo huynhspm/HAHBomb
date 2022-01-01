@@ -46,7 +46,7 @@ Ngày 4/12/2021
 - Ngày 21/12/2021
 - Thêm replay như checkpoint cho người chơi chơi tiếp màn vừa thua
 - Sử lý va chạm người và wall, box giảm đi để thuận lợi cho việc di chuyển
-### Update 6:
+### Update 5:
 - Ngày 22/12/2012
 - Sửa lỗi puause vẫn đặt được bomb
 - Sửa boss level 2 cập nhật direction khi avoid bomb để randomWay không quay lại
