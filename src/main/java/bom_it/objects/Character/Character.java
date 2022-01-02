@@ -47,15 +47,15 @@ public abstract class Character extends Sprite {
         numBomb.setValue(numBomb.getValue() + 1);
     }
 
-    public void increasePowerBomb(){
+    public void increasePowerBomb() {
         powerBomb.setValue(powerBomb.getValue() + 1);
     }
 
-    public void increaseLives(){
+    public void increaseLives() {
         lives.setValue(lives.getValue() + 1);
     }
 
-    public void increasePowerSpeed(){
+    public void increasePowerSpeed() {
         powerSpeed.setValue(powerSpeed.getValue() + 1);
     }
 
@@ -291,7 +291,7 @@ public abstract class Character extends Sprite {
             int y = getYSetBomb();
             if (!App.gameWorld.getSpritesMap().getMap()[y][x].getTypeSprite(BOMB)) {
                 numBomb.setValue(numBomb.getValue() - 1);
-                App.gameWorld.spawn(new Bomb(x, y, this));
+                Bomb.createBomb(x, y, this);
             }
         }
     }
