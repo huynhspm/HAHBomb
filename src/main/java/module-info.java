@@ -14,4 +14,10 @@ module bom_it.game {
     exports bom_it.controller;
     exports bom_it.objects;
     exports bom_it.Enum;
+    exports bom_it.objects.Character.Enemy;
+    opens bom_it.objects.Character.Enemy to javafx.fxml;
+    exports bom_it.objects.Item;
+    opens bom_it.objects.Item to javafx.fxml;
+    exports bom_it.objects.Character;
+    opens bom_it.objects.Character to javafx.fxml;
 }

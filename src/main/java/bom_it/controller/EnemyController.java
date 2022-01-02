@@ -4,7 +4,7 @@ import bom_it.Enum.Direction;
 import bom_it.Enum.TypeSprite;
 import bom_it.game.App;
 import bom_it.game.Map;
-import bom_it.objects.Enemy;
+import bom_it.objects.Character.Enemy.Enemy;
 
 import java.util.*;
 

@@ -1,8 +1,9 @@
 package bom_it.objects;
 
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
+import bom_it.objects.Item.Item;
 
 import static bom_it.Enum.TypeSprite.*;
 

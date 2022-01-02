@@ -1,6 +1,6 @@
 package bom_it.Enum;
 
-import bom_it.objects.Character;
+import bom_it.objects.Character.Character;
 
 public enum StatusCharacter {
         STUNNED, MOVE, IMMORTAL;

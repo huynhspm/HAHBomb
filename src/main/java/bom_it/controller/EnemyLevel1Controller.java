@@ -1,6 +1,6 @@
 package bom_it.controller;
 
-import bom_it.objects.Enemy;
+import bom_it.objects.Character.Enemy.Enemy;
 
 import static bom_it.Enum.TypeSprite.*;
 

@@ -1,5 +1,6 @@
-package bom_it.engine;
+package bom_it.game;
 
+import bom_it.engine.ImageSheet;
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;

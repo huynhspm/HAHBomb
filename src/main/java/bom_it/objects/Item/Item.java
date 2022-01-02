@@ -1,9 +1,10 @@
-package bom_it.objects;
+package bom_it.objects.Item;
 
 import bom_it.Enum.TypeItem;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
+import bom_it.objects.Character.Character;
 import javafx.scene.image.Image;
 
 import java.util.Date;
@@ -38,5 +39,5 @@ public abstract class Item extends Sprite {
         setImage(imageItem[(int) (new Date().getTime() / 400) % 2 + 1].getImage());
     }
 
-    protected abstract void powerUp(Character character);
+    public abstract void powerUp(Character character);
 }

@@ -1,9 +1,9 @@
 package bom_it.controller;
 
 import bom_it.Enum.StatusGame;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.game.App;
-import bom_it.objects.Character;
+import bom_it.objects.Character.Character;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;

@@ -1,8 +1,9 @@
 package bom_it.objects;
 
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
+import bom_it.objects.Character.Character;
 
 import java.util.Date;
 
@@ -24,7 +25,7 @@ public class Bomb extends Sprite {
     public Bomb(int xInMap, int yInMap, Character character) {
         super(BOMB_IMAGE[0].getImage(), xInMap, yInMap, BOMB);
         this.character = character;
-        this.power = character.powerBomb.getValue();
+        this.power = character.powerBombProperty().getValue();
 
         for (Sprite sprite : App.gameWorld.sprites()) {
             if (sprite instanceof Character && sprite.checkCollision(this)) {

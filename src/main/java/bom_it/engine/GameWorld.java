@@ -1,7 +1,7 @@
 package bom_it.engine;
 
 import bom_it.game.Map;
-import bom_it.objects.Player;
+import bom_it.objects.Character.Player;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

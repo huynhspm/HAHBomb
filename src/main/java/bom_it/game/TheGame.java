@@ -4,6 +4,8 @@ import bom_it.Enum.StatusGame;
 import bom_it.engine.GameWorld;
 import bom_it.engine.Sprite;
 import bom_it.objects.*;
+import bom_it.objects.Character.Player;
+import bom_it.objects.Character.Enemy.Enemy;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;

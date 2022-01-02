@@ -1,7 +1,7 @@
-package bom_it.objects;
+package bom_it.objects.Character;
 
 import bom_it.Enum.TypePlayer;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.game.App;
 
 import static bom_it.Enum.Direction.DOWN;

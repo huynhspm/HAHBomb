@@ -1,9 +1,9 @@
 package bom_it.controller;
 
 import bom_it.Enum.TypePlayer;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.game.App;
-import bom_it.objects.Player;
+import bom_it.objects.Character.Player;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;

@@ -1,6 +1,7 @@
-package bom_it.objects;
+package bom_it.objects.Item;
 
-import bom_it.engine.Images;
+import bom_it.game.Images;
+import bom_it.objects.Character.Character;
 
 import static bom_it.Enum.TypeItem.BOMB_ITEM;
 
@@ -10,7 +11,7 @@ public class BombItem extends Item {
     }
 
     @Override
-    protected void powerUp(Character character) {
+    public void powerUp(Character character) {
         character.increaseNumBomb();
     }
 }

@@ -1,10 +1,15 @@
-package bom_it.objects;
+package bom_it.objects.Character;
 
 import bom_it.Enum.StatusCharacter;
 import bom_it.Enum.TypeSprite;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
+import bom_it.objects.Bomb;
+import bom_it.objects.Box;
+import bom_it.objects.Explode;
+import bom_it.objects.Item.Item;
+import bom_it.objects.Wall;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.image.Image;
@@ -41,6 +46,7 @@ public abstract class Character extends Sprite {
     public void increaseNumBomb() {
         numBomb.setValue(numBomb.getValue() + 1);
     }
+
     public void increasePowerBomb(){
         powerBomb.setValue(powerBomb.getValue() + 1);
     }
@@ -53,11 +59,11 @@ public abstract class Character extends Sprite {
         powerSpeed.setValue(powerSpeed.getValue() + 1);
     }
 
-    protected Bomb[] getOnBomb() {
+    public Bomb[] getOnBomb() {
         return onBomb;
     }
 
-    protected void setOnBomb(Bomb[] onBomb, Bomb bomb) {
+    public void setOnBomb(Bomb[] onBomb, Bomb bomb) {
         if (onBomb[0] == null) {
             onBomb[0] = bomb;
         } else if (onBomb[0] != bomb) {
@@ -111,6 +117,10 @@ public abstract class Character extends Sprite {
 
     public void setStatus(StatusCharacter status) {
         this.status = status;
+    }
+
+    public StatusCharacter getStatus() {
+        return status;
     }
 
     // Constructor

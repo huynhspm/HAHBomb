@@ -1,6 +1,6 @@
 package bom_it.controller;
 
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.game.App;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

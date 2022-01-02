@@ -1,6 +1,6 @@
 package bom_it.objects;
 
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
 

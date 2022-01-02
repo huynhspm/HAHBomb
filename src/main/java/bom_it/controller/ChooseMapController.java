@@ -1,7 +1,7 @@
 package bom_it.controller;
 
 import bom_it.Enum.TypeMap;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.game.App;
 import bom_it.game.Map;
 import javafx.fxml.FXML;

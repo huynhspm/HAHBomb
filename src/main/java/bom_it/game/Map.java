@@ -4,10 +4,9 @@ import bom_it.Enum.Direction;
 import bom_it.Enum.TypeMap;
 import bom_it.Enum.TypeSprite;
 import bom_it.controller.Pair;
-import bom_it.engine.Images;
 import bom_it.engine.Sprite;
 import bom_it.objects.Bomb;
-import bom_it.objects.FlameItem;
+import bom_it.objects.Item.FlameItem;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

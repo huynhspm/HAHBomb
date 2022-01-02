@@ -1,10 +1,12 @@
-package bom_it.objects;
+package bom_it.objects.Character.Enemy;
 
 import bom_it.controller.EnemyController;
 import bom_it.controller.Pair;
-import bom_it.engine.Images;
+import bom_it.game.Images;
 import bom_it.engine.Sprite;
 import bom_it.game.App;
+import bom_it.objects.*;
+import bom_it.objects.Character.Character;
 
 import java.util.List;
 import java.util.stream.Collectors;
